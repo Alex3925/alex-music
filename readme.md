@@ -1,4 +1,4 @@
-# Saavn
+# Alex
 
  <p>Playing high quality songs, over your web browser, ad-free experience, High-Quality Music upto 320kbps</p>
  
@@ -12,7 +12,7 @@ Preview is available at the links below : <br>
 ## Details
 > Status : `In Development`<br>
 Version : `v3.0` <br>
-Developers: `@wiz64`
+Developers: `@Alex`
 ## Features
 - ⭕ All basic features of a music player
 - :green_apple: Download MP3 Songs with metadata
@@ -41,7 +41,7 @@ This can be deployed to any Web Hosting Service, Platforms like Vercel, Heroku, 
 <br>
 
 ## Copyright & Credits
-> Developed by [@wiz64](https://github.com/wiz64) featuring API made by [@sumitkolhe](https://github/sumitkolhe) .
+> Developed by [@alex](https://github.com/wiz64) featuring API made by [@sumitkolhe](https://github/sumitkolhe) .
 
 XDA - Off Topic Group
 
