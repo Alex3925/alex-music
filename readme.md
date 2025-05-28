@@ -6,8 +6,8 @@
 
 ## Live Preview
 Preview is available at the links below : <br>
-[saavn-web-ui.vercel.app](https://saavn-web-ui.vercel.app/)<br>
-[saavn.codeforkers.tk](https://saavn.codeforkers.tk)
+[https://alex-music-9doh.onrender.com/#english](https://alex-music-9doh.onrender.com/#english)<br>
+[SITE 2 DOWN](https://alex-music-9doh.onrender.com/#english)
 
 ## Details
 > Status : `In Development`<br>
@@ -41,7 +41,7 @@ This can be deployed to any Web Hosting Service, Platforms like Vercel, Heroku, 
 <br>
 
 ## Copyright & Credits
-> Developed by [@alex](https://github.com/wiz64) featuring API made by [@sumitkolhe](https://github/sumitkolhe) .
+> Developed by [@alex](https://github.com/Alex3925) featuring API made by [@sumitkolhe](https://github/sumitkolhe) .
 
 XDA - Off Topic Group
 
