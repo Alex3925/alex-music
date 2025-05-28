@@ -1,52 +1,49 @@
-# Alex
+# Alex Music Player
 
- <p>Playing high quality songs, over your web browser, ad-free experience, High-Quality Music upto 320kbps</p>
- 
+<p>Playing high quality songs on your web browser, ad-free experience, high-quality music up to 320kbps</p>
+
 ---
 
 ## Live Preview
-Preview is available at the links below : <br>
-[https://alex-music-9doh.onrender.com/#english](https://alex-music-9doh.onrender.com/#english)<br>
-
-[SITE 2 DOWN](https://alex-music-9doh.onrender.com/#english)
+Preview is available at the link below:  
+[https://alex-music-9doh.onrender.com/#english](https://alex-music-9doh.onrender.com/#english)  
+*(SITE 2 is currently down)*
 
 ## Details
-> Status : `In Development`<br>
-Version : `v3.0` <br>
-Developers: `@Alex`
+> **Status**: In Development  
+> **Version**: v3.0  
+> **Developer**: [@Alex3925](https://github.com/Alex3925)
+
 ## Features
-- ⭕ All basic features of a music player
-- :green_apple: Download MP3 Songs with metadata
-- 🏠 Modern Design
-- 📱 Simplified Design for Mobile Devices
-- ♻ No ads, Open-Source, Optimised Code
-- 🎵 Large Library of Songs, Fetched Directly
-  
+- ⭕ All basic features of a music player  
+- 🍏 Download MP3 songs with metadata  
+- 🏠 Modern design  
+- 📱 Simplified design for mobile devices  
+- ♻ Ad-free, open-source, optimized code  
+- 🎵 Large library of songs, fetched directly  
+- 📜 **Lyrics display** - View lyrics for songs in real-time  
+- 🔊 **Background playback** - Continue playing music when the tab is inactive or the device is locked
+
 ## Upcoming Features
-- Playlists
-- Song Sharing
-- Lyrics
-  
+- Playlists  
+- Song sharing  
+
 ## Installation / Usage
+The files are completely static and can be served directly to the browser. No installation is required. Simply open the page in a browser, and you're ready to enjoy music!  
 
-Files are completely static, and can be served directly to the browser. No installation is required, Just open the page on a browser and you're ready to rock.
-Downloader API is available at [wiz64/saadhna-mp3-server](https://github.com/wiz64/saadhna-mp3-server)
-
-<br>
+The downloader API is available at [wiz64/saadhna-mp3-server](https://github.com/wiz64/saadhna-mp3-server).
 
 ## Deployment
-This can be deployed to any Web Hosting Service, Platforms like Vercel, Heroku, Replit, Github Pages or through applications like PHP, NodeJS (express.js) or Python(Flask)
+This project is currently deployed on Render at [https://alex-music-9doh.onrender.com](https://alex-music-9doh.onrender.com). You can deploy it to any web hosting service, such as Vercel, Heroku, Replit, GitHub Pages, or through applications like PHP, Node.js (Express.js), or Python (Flask).  
 
-> Just anything that can serve plain HTML will work
-
-<br>
+> Any platform that can serve plain HTML will work!
 
 ## Copyright & Credits
-> Developed by [@alex](https://github.com/Alex3925) featuring API made by [@sumitkolhe](https://github/sumitkolhe) .
+> **Developed by**: [@Alex3925](https://github.com/Alex3925)  
+> **Featuring API by**: [@sumitkolhe](https://github.com/sumitkolhe)  
+> **Community**: XDA - Off Topic Group  
 
-XDA - Off Topic Group
+This project is licensed under the MIT License. View the [LICENSE FILE](./LICENSE).  
+> © Copyright 2022 @Alex3925  
 
-This code was licensed under MIT License. View [LICENSE FILE](./LICENSE)
-> &copy;  Copyright 2022 @Alex3925
-
-I am not responsible for any Third-Party Copyright Material, We do not host any copyrighted material on our servers or accounts.
+I am not responsible for any third-party copyright material. We do not host any copyrighted material on our servers or accounts.
