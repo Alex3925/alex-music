@@ -12,13 +12,13 @@
   font-family: 'JetBrains Mono', monospace;
 }
 .song-image {
-  width: 110px;border-top-left-radius: 30px;height: 114px;
+  width: 110px; border-top-left-radius: 30px; height: 114px;
 }
 .song-text {
-  margin: 0px;color: rgb(172,248,159);max-width: 100%;
+  margin: 0px; color: rgb(172,248,159); max-width: 100%;
 }
 .song-container {
-  margin-bottom: 20px;border-bottom-right-radius: 30px;border: 2px solid var(--gray);border-bottom-style: solid;border-top-left-radius: 30px;
+  margin-bottom: 20px; border-bottom-right-radius: 30px; border: 2px solid var(--gray); border-bottom-style: solid; border-top-left-radius: 30px;
 }
 audio::-webkit-media-controls-panel {
   background-color: #ff9f44af;
@@ -125,4 +125,24 @@ footer {
 }
 .error {
  margin : 20px;
+}
+
+/* New Styles for Lyrics Panel */
+#lyrics-panel {
+  margin-top: 10px;
+  padding: 10px;
+  background: #222;
+  border-radius: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#lyrics-panel h3 {
+  margin: 0 0 10px 0;
+  color: #fff;
+}
+
+#lyrics-content {
+  white-space: pre-wrap;
+  color: #ddd;
 }
