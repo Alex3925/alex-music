@@ -1,136 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--
-Developer : wiz64 ,
+Developer: wiz64,
 Enhanced By: Alex Jhon Ponce
-Contribute: https://github.com/wiz64/saavn-web-ui ,
+Contribute: https://github.com/wiz64/saavn-web-ui,
 Don't forget to star the repo
 -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Alex Music Player</title>
-    <meta name="description" content="Alex Music Player is an Ad-Free Music Player, High Quality MP3 Songs with Metadata support, and a Modern Design. A large library of songs. developed by wiz64">
+    <meta name="description" content="Alex Music Player is an Ad-Free Music Player, High Quality MP3 Songs with Metadata support, and a Modern Design. A large library of songs. Developed by wiz64, enhanced by Alex3925.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body style="padding-bottom: 50px; background: rgb(0,0,0);">
-    <header class="header-dark" style="color: rgb(205,205,205); padding: 0px 0px 10px;">
-        <nav class="navbar navbar-dark navbar-expand-lg navigation-clean-search">
-            <div class="container"><a class="navbar-brand" href="#">Alex</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+<body>
+    <!-- Header with Search -->
+    <header class="header-dark">
+        <nav class Rings="navbar navbar-dark navbar-expand-lg navigation-clean-search">
+            <div class="container">
+                <a class="navbar-brand" href="#">Alex Music</a>
+                <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="navcol-1">
+                    <form class="form-inline mx-auto search-form">
+                        <div class="input-group">
+                            <select id="saavn-bitrate" class="form-control bitrate-select">
+                                <option value="4">320kbps</option>
+                                <option value="3" selected="">160kbps</option>
+                                <option value="2">96kbps</option>
+                                <option value="1">48kbps</option>
+                            </select>
+                            <input class="form-control search-input" type="text" id="saavn-search-box" placeholder="Search Songs, Artists, Albums...">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary search-btn" id="saavn-search-trigger" type="submit" onclick="SaavnSearch()">Search</button>
+                            </div>
+                        </div>
+                    </form>
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="btn btn-primary" role="button" href="https://github.com/Alex3925/alex-music" target="_blank">Github</a></li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary github-btn" role="button" href="https://github.com/Alex3925/alex-music" target="_blank">GitHub</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    <h1 class="text-center" style="margin: 0px;">Alex Music</h1>
-                    <h3 class="text-center" style="color: rgba(249,255,255,0.81); font-family: Bitter, serif;">Music Player & Downloader</h3>
-                    <p class="text-center" style="padding: 0px 5px;">Ad-Free, Metadata, & Modern Design</p>
-                </div>
-            </div>
-        </div>
     </header>
-    <div>
-        <div class="tab-content">
-            <div class="tab-pane active" role="tabpanel" id="tab-1">
-                <section class="highlight-clean" style="background: #000; color: rgb(249,249,249); padding-top: 20px;">
-                    <div class="text-center">
-                        <select id="saavn-bitrate">
-                            <option value="4">320kbps</option>
-                            <option value="3" selected="">160kbps</option>
-                            <option value="2">96kbps</option>
-                            <option value="1">48kbps</option>
-                        </select></div>
-                    <p class="text-center" style="padding: 0px 5px;"></p>
-                    <div class="container" style="padding: 0px;">
-                        <div class="intro">
-                            <form class="text-center" action="#" method="get">
-                                <div style="width: 95%; margin: auto; padding: 3px;" placeholder="Enter Song, Artist or Album name"><input class="form-control float-left fit-content" type="text" id="saavn-search-box" style="margin: 0px; color: var(--gray-dark); max-width: 100%; width: 75%;" placeholder="Enter Name, Year, Artist"><button class="btn btn-primary" id="saavn-search-trigger" type="submit" style="text-align: center;" onclick="SaavnSearch()">Search</button></div>
-                                <h5 class="text-uppercase text-center" style="color: rgb(165,255,184);">Results</h5>
-                            </form>
-                        </div>
-                        <div id="saavn-results" style="margin-bottom: 20px;">
-                            <h5>Featured</h5>
-                        </div>
-                        <div class="text-center" style="width:100%"><button id="loadmore" style="width: 100%;">Load More</button></div>
-                        <div class="button-container">
-                        </div>
-                        <script>
-                            const buttonTitles = ['2023','English Songs','Edward Maya','Zack Knight','Akcent','Arijit Singh','Enrique Iglesias','Pitbull','Imran Khan', 'DJ Snake', 'Darshan Raval', 'Jubin Nautiyal', 'Armaan Malik', 'Old Songs',"Adele","Billie Eilish","Imagine Dragons","Ed Sheeran","Neha Kakkar", "Badshah", "Atif Aslam", "Guru Randhawa", "Shreya Ghoshal", "Tony Kakkar", "Harrdy Sandhu", "Armaan Malik", "Diljit Dosanjh", "Sonu Nigam", "Vishal Dadlani", "Kanika Kapoor", "Sukhwinder Singh", "Sunidhi Chauhan", "Mika Singh", "Shaan", "Mohit Chauhan", "Pritam", "KK", "Yo Yo Honey Singh","Taylor Swift","Sia","Radioactive","Halsey","The Chainsmokers","Drake","Justin Bieber","Beyonce","The Weeknd","Rihanna","Lady Gaga","AC/DC","Michael Jackson","The Rolling Stones"];
-                            const buttonContainer = document.querySelector('.button-container');
-                            buttonTitles.forEach(title => {
-                                const button = document.createElement('button');
-                                button.classList.add('search-toggle');
-                                button.textContent = title;
-                                button.setAttribute('onclick', `doSaavnSearch('${title}')`);
-                                buttonContainer.appendChild(button);
-                            });
-                        </script>
-                        <p class="footer" align="center">
-                            This content is not affiliated with, endorsed, sponsored, or specifically approved by any third party music provider like Gaana, Saavn, Spotfy, and is not responsible for any copyright material.<br>
-                            We don't serve any music on our servers.<br><br>
-                            Originally by Alex.<br>
-                            Re-Modified by Alex
-                        </p>
-                        <div style="padding-bottom: 40px;">
-                        </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="highlight-clean">
+            <div class="container">
+                <div class="intro">
+                    <h2 class="text-center">Explore Music</h2>
+                    <div class="button-container"></div>
+                    <script>
+                        const buttonTitles = ['2023', 'English Songs', 'Edward Maya', 'Zack Knight', 'Akcent', 'Arijit Singh', 'Enrique Iglesias', 'Pitbull', 'Imran Khan', 'DJ Snake', 'Darshan Raval', 'Jubin Nautiyal', 'Armaan Malik', 'Old Songs', 'Adele', 'Billie Eilish', 'Imagine Dragons', 'Ed Sheeran', 'Neha Kakkar', 'Badshah', 'Atif Aslam', 'Guru Randhawa', 'Shreya Ghoshal', 'Tony Kakkar', 'Harrdy Sandhu', 'Diljit Dosanjh', 'Sonu Nigam', 'Vishal Dadlani', 'Kanika Kapoor', 'Sukhwinder Singh', 'Sunidhi Chauhan', 'Mika Singh', 'Shaan', 'Mohit Chauhan', 'Pritam', 'KK', 'Yo Yo Honey Singh', 'Taylor Swift', 'Sia', 'Radioactive', 'Halsey', 'The Chainsmokers', 'Drake', 'Justin Bieber', 'Beyonce', 'The Weeknd', 'Rihanna', 'Lady Gaga', 'AC/DC', 'Michael Jackson', 'The Rolling Stones'];
+                        const buttonContainer = document.querySelector('.button-container');
+                        buttonTitles.forEach(title => {
+                            const button = document.createElement('button');
+                            button.classList.add('search-toggle');
+                            button.textContent = title;
+                            button.setAttribute('onclick', `doSaavnSearch('${title}')`);
+                            buttonContainer.appendChild(button);
+                        });
+                    </script>
+                </div>
+                <h5 class="text-uppercase text-center results-title">Results</h5>
+                <div id="saavn-results">
+                    <h5>Featured</h5>
+                </div>
+                <div class="text-center load-more">
+                    <button id="loadmore">Load More</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Audio Player -->
+    <div id="audio-player">
+        <div class="container player-container">
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <img class="img-fluid player-image" id="player-image" src="https://i.pinimg.com/originals/ed/54/d2/ed54d2fa700d36d4f2671e1be84651df.jpg" loading="lazy">
+                </div>
+                <div class="col player-info">
+                    <div class="song-details">
+                        <span id="player-name">Song</span>
+                        <span id="player-album">Album</span>
                     </div>
-                </section>
-            </div>
-        </div>
-    </div>
-    <div id="audio-player" style="z-index: 99; background: #ffffff33; width: 100%; margin: 0px; color: var(--light); backdrop-filter: blur(4px); border-top-left-radius: 10px; border-top-right-radius: 20px;">
-        <div class="row" style="margin: 0px;">
-            <div class="col-auto fit-content" style="padding: 0px;">
-                <img class="img-fluid d-inline" id="player-image" style="height: 75px; width: 75px; border-radius: 10px;" src="https://i.pinimg.com/originals/ed/54/d2/ed54d2fa700d36d4f2671e1be84651df.jpg" loading="lazy">
-            </div>
-            <div class="col fit-content" style="padding: 0px;">
-                <div style="max-height: 24px; max-width: 95%; word-wrap: normal; padding-left: 20px;"><span id="player-name">Song</span><span><br></span><span id="player-album">Album</span></div><br>
-                <audio id="player" controls="controls" controlsList="nodownload" style="width: 100%; height: 30px; padding-left: 20px; padding-top: 5px;">
-                    <source id="audioSource" src=""></source>
-                    Your browser does not support the audio format.
-                </audio>
-                <!-- Lyrics Panel -->
-                <div id="lyrics-panel" style="margin-top: 10px; padding: 10px; background: #222; border-radius: 5px; max-height: 200px; overflow-y: auto;">
-                    <h3 style="margin: 0 0 10px 0; color: #fff;">Lyrics</h3>
-                    <div id="lyrics-content" style="white-space: pre-wrap; color: #ddd;">Lyrics will appear here...</div>
+                    <audio id="player" controls="controls" controlsList="nodownload">
+                        <source id="audioSource" src=""></source>
+                        Your browser does not support the audio format.
+                    </audio>
+                    <div id="lyrics-panel">
+                        <h3>Lyrics</h3>
+                        <div id="lyrics-content">Lyrics will appear here...</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- Floating Downloader Popup -->
-    <div class="float-button" style="width: 30px; height: 30px; border-radius: 50%; background-color: #fff; box-shadow: 0 0 10px #000; cursor: pointer; position: fixed; top: 50px; right: 20px; z-index: 9999;">
+    <div class="float-button">
         <a href="javascript:void(0);" class="btn btn-primary" id="mpopupLink">
             <img src="https://img.icons8.com/ios/50/000000/download.png">
         </a>
     </div>
+
     <!-- Modal Popup Box -->
     <div id="mpopupBox" class="mpopup">
         <div class="modal-content">
-            <div class="modal-header" style="display: inline;">
+            <div class="modal-header">
                 <span class="close">×</span>
                 <h2>Downloads</h2>
             </div>
             <div class="modal-body">
-                <row>
-                    <ul id="download-list" class="nobullets">
-                        <!-- Dynamic content will be added by scripts -->
-                    </ul>
-                </row>
+                <ul id="download-list" class="nobullets"></ul>
             </div>
-            <div class="modal-footer" style="text-align: center;">
+            <div class="modal-footer">
                 <p>Don't flood the Media Server, Have patience...</p>
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            This content is not affiliated with, endorsed, sponsored, or specifically approved by any third-party music provider like Gaana, Saavn, Spotify, and is not responsible for any copyright material.<br>
+            We don't serve any music on our servers.<br>
+            Originally by wiz64, re-modified by Alex3925.
+        </p>
+    </footer>
+
     <!-- Service Worker Registration -->
     <script>
         if ('serviceWorker' in navigator) {
@@ -143,5 +151,14 @@ Don't forget to star the repo
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/functions.js"></script>
     <script src="assets/js/saavn-search.js"></script>
+    <script>
+        // Modal popup logic
+        var mpopup = document.getElementById('mpopupBox');
+        var mpLink = document.getElementById("mpopupLink");
+        var close = document.getElementsByClassName("close")[0];
+        mpLink.onclick = function() { mpopup.style.display = "block"; };
+        close.onclick = function() { mpopup.style.display = "none"; };
+        window.onclick = function(event) { if (event.target == mpopup) { mpopup.style.display = "none"; } };
+    </script>
 </body>
 </html>
