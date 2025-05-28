@@ -46,6 +46,6 @@ This can be deployed to any Web Hosting Service, Platforms like Vercel, Heroku, 
 XDA - Off Topic Group
 
 This code was licensed under MIT License. View [LICENSE FILE](./LICENSE)
-> &copy;  Copyright 2022 @wiz64
+> &copy;  Copyright 2022 @Alex3925
 
 I am not responsible for any Third-Party Copyright Material, We do not host any copyrighted material on our servers or accounts.
